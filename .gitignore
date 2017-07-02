@@ -1,6 +1,7 @@
 # Application
 dist
 cache
+css
 
 # Remote Sync
 .remote-sync.json
