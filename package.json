@@ -1,0 +1,46 @@
+{
+  "name": "bulma.styl",
+  "version": "0.4.2",
+  "homepage": "http://github.com/Log1x/bulma.styl",
+  "author": "Brandon Nifong <brandon@tendency.me> (https://log1x.com)",
+  "contributors": [
+    "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)",
+    "Oskari Groenroos <oskari@groenroos.fi> (http://groenroos.fi)"
+  ],
+  "description": "Modern CSS framework based on Flexbox",
+  "main": "bulma.styl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Log1x/bulma.styl.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "stylus",
+    "flexbox",
+    "responsive",
+    "framework"
+  ],
+  "bugs": {
+    "url": "https://github.com/Log1x/bulma.styl/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "stylus": "^0.54.5",
+    "postcss-cli": "^4.1.0"
+  },
+  "scripts": {
+    "build": "npm run build-clean && npm run build-stylus && npm run build-autoprefix",
+    "build-autoprefix": "postcss --use autoprefixer --output ./css/bulma.css ./css/bulma.css",
+    "build-clean": "rm -rf css; mkdir css",
+    "build-stylus": "stylus bulma.styl --out css",
+    "start": "stylus -w bulma.styl --out css"
+  },
+  "files": [
+    "css",
+    "stylus",
+    "bulma.stylus",
+    "LICENSE",
+    "README.md"
+  ]
+}

@@ -1,0 +1,117 @@
+$primary ?= $turquoise
+
+$info ?= $blue
+$success ?= $green
+$warning ?= $yellow
+$danger ?= $red
+
+$light ?= $white-ter
+$dark ?= $grey-darker
+
+// Invert colors
+
+$orange-invert ?= findColorInvert($orange)
+$yellow-invert ?= findColorInvert($yellow)
+$green-invert ?= findColorInvert($green)
+$turquoise-invert ?= findColorInvert($turquoise)
+$blue-invert ?= findColorInvert($blue)
+$purple-invert ?= findColorInvert($purple)
+$red-invert ?= findColorInvert($red)
+
+$primary-invert ?= $turquoise-invert
+$info-invert ?= $blue-invert
+$success-invert ?= $green-invert
+$warning-invert ?= $yellow-invert
+$danger-invert ?= $red-invert
+$light-invert ?= $dark
+$dark-invert ?= $light
+
+// General colors
+
+$background ?= $white-ter
+
+$border ?= $grey-lighter
+$border-hover ?= $grey-light
+
+// Text colors
+
+$text ?= $grey-dark
+$text-invert ?= findColorInvert($text)
+$text-light ?= $grey
+$text-strong ?= $grey-darker
+
+// Code colors
+
+$code ?= $red
+$code-background ?= $background
+
+$pre ?= $text
+$pre-background ?= $background
+
+// Link colors
+
+$link ?= $primary
+$link-invert ?= $primary-invert
+$link-visited ?= $purple
+
+$link-hover ?= $grey-darker
+$link-hover-border ?= $grey-light
+
+$link-focus ?= $grey-darker
+$link-focus-border ?= $primary
+
+$link-active ?= $grey-darker
+$link-active-border ?= $grey-dark
+
+// Typography
+
+$family-primary ?= $family-sans-serif
+$family-code ?= $family-monospace
+
+$size-small ?= $size-7
+$size-normal ?= $size-6
+$size-medium ?= $size-5
+$size-large ?= $size-4
+
+// Lists and maps
+
+$colors ?= {
+  'white': {
+  	'1': $white,
+  	'2': $black
+  },
+  'black': {
+  	'1': $black,
+  	'2': $white
+  },
+  'light': {
+  	'1': $light,
+  	'2': $light-invert
+  },
+  'dark': {
+  	'1': $dark,
+  	'2': $dark-invert
+  },
+  'primary': {
+  	'1': $primary,
+  	'2': $primary-invert
+  },
+  'info': {
+  	'1': $info,
+  	'2': $info-invert
+  },
+  'success': {
+  	'1': $success,
+  	'2': $success-invert
+  },
+  'warning': {
+  	'1': $warning,
+  	'2': $warning-invert
+  },
+  'danger': {
+  	'1': $danger,
+  	'2': $danger-invert
+  }
+}
+
+$sizes ?= $size-1 $size-2 $size-3 $size-4 $size-5 $size-6
