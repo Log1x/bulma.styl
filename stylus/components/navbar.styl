@@ -46,9 +46,9 @@ $navbar-divider-background ?= $border
   padding 0.5rem 1rem
   position relative
 
-a.navbar-itemhover,
+a.navbar-item:hover,
 a.navbar-item.is-active,
-.navbar-item.has-dropdownhover .navbar-link,
+.navbar-item.has-dropdown:hover .navbar-link,
 .navbar-item.has-dropdown.is-active .navbar-link
   background-color $navbar-item-hover-background
   color $navbar-item-hover
@@ -106,17 +106,17 @@ a.navbar-item.is-active,
     &.is-transparent
       a.navbar-item,
       .navbar-link
-        &hover,
+        &:hover,
         &.is-active
           background-color transparent
       .navbar-item.has-dropdown
         &.is-active,
-        &.is-hoverablehover
+        &.is-hoverable:hover
           .navbar-link
             background-color transparent
       .navbar-dropdown
         a.navbar-item
-          &hover
+          &:hover
             background-color $navbar-dropdown-item-hover-background
             color $navbar-dropdown-item-hover
           &.is-active
@@ -132,7 +132,7 @@ a.navbar-item.is-active,
     &.has-dropdown
       align-items stretch
     &.is-active,
-    &.is-hoverablehover
+    &.is-hoverable:hover
       .navbar-dropdown
         display block
         &.is-boxed
@@ -143,7 +143,7 @@ a.navbar-item.is-active,
     background-color $navbar-item-active-background
     color $navbar-item-active
   .navbar-link
-    &after
+    &:after
       arrow($navbar-dropdown-arrow)
       margin-top -0.375em
       right 1.125em
@@ -175,7 +175,7 @@ a.navbar-item.is-active,
       white-space nowrap
     a.navbar-item
       padding-right 3rem
-      &hover
+      &:hover
         background-color $navbar-dropdown-item-hover-background
         color $navbar-dropdown-item-hover
       &.is-active
@@ -188,7 +188,7 @@ a.navbar-item.is-active,
       display block
       opacity 0
       pointer-events none
-      top calc(100% + ({$navbar-dropdown-offset}))
+      top "calc(100% + %s)" % $navbar-dropdown-offset
       transform translateY(-5px)
       transition-duration $speed
       transition-property opacity, transform
