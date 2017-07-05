@@ -4,9 +4,11 @@
   border-radius $radius
   padding 1.25rem 2.5rem 1.25rem 1.5rem
   position relative
-  a
+  a:not(.button)
     color currentColor
     text-decoration underline
+  strong
+    color: currentColor
   code,
   pre
     background $white
@@ -19,7 +21,7 @@
   .title,
   .subtitle,
   .content
-    color inherit
+    color currentColor
   // Colors
   for name, pair in $colors
     color = pair['1']
