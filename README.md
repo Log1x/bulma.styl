@@ -29,7 +29,7 @@ yarn add bulma.styl
 
 Since Bulma.styl is functionally identical to the original Bulma, you can refer to the original [Bulma documentation](http://bulma.io/documentation/overview/start/) for instructions, examples, syntax and browser support.
 
-All variable and mixin names are the same. The only caveat is that if you wish to customize the `$colors` variable, you must adhere to the Stylus hash format. Refer to the default value in [`/stylus/utilities/variables.styl:148`](https://github.com/Log1x/bulma.styl/blob/master/stylus/utilities/variables.styl#L148) for an example.
+All variable and mixin names are the same.
 
 ## Bugs & support
 
