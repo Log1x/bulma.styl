@@ -48,14 +48,16 @@ $body-size ?= 16px
 
 // Responsiveness
 
+// The container gap, which acts as the offset for breakpoints
+$gap ?= 24px
 // 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
 $tablet ?= 769px
-// 960px container + 40px
-$desktop ?= 1000px
-// 1152px container + 40
-$widescreen ?= 1192px
-// 1344px container + 40
-$fullhd ?= 1384px
+// 960px container + 3rem
+$desktop ?= 960px + (2 * $gap)
+// 1152px container + 3rem
+$widescreen ?= 1152px + (2 * $gap)
+// 1344px container + 3rem
+$fullhd ?= 1344px + (2 * $gap)
 
 // Miscellaneous
 

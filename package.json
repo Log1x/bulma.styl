@@ -1,6 +1,6 @@
 {
   "name": "bulma.styl",
-  "version": "0.4.31",
+  "version": "0.4.4",
   "homepage": "http://github.com/Log1x/bulma.styl",
   "author": "Brandon Nifong <brandon@tendency.me> (https://log1x.com)",
   "contributors": [
@@ -26,8 +26,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
-    "stylus": "^0.54.5",
-    "postcss-cli": "^4.1.0"
+    "postcss-cli": "^4.1.0",
+    "stylus": "^0.54.5"
   },
   "scripts": {
     "build": "npm run build-clean && npm run build-stylus && npm run build-autoprefix",
