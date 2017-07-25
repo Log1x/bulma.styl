@@ -4,7 +4,6 @@
 .container
   margin 0 auto
   position relative
-  width $desktop - (2 * $gap)
   +desktop()
     max-width $desktop - (2 * $gap)
     width $desktop - (2 * $gap)
@@ -12,7 +11,7 @@
       margin-left $gap
       margin-right $gap
       max-width none
-width: auto
+      width: auto
   +until($widescreen)
     &.is-widescreen
       max-width $widescreen - (2 * $gap)
