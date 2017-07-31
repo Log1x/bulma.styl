@@ -1,32 +1,3 @@
-// Display
-
-$displays ?= block flex inline inline-block inline-flex
-
-for $display in $displays
-  .is-{$display}
-    display $display
-  +mobile()
-    .is-{$display}-mobile
-      display $display !important
-  +tablet()
-    .is-{$display}-tablet
-      display $display !important
-  +tablet-only()
-    .is-{$display}-tablet-only
-      display $display !important
-  +touch()
-    .is-{$display}-touch
-      display $display !important
-  +desktop()
-    .is-{$display}-desktop
-      display $display !important
-  +desktop-only()
-    .is-{$display}-desktop-only
-      display $display !important
-  +widescreen()
-    .is-{$display}-widescreen
-      display $display !important
-
 // Float
 
 .is-clearfix
@@ -59,16 +30,49 @@ for $display in $displays
 .has-text-right
   text-align right !important
 
-for name, pair in $colors
-  color = pair['1']
-  .has-text-{name}
-    color color
-  a.has-text-{name}
+for $name, $pair in $colors
+  $color = $pair['1']
+  .has-text-{$name}
+    color $color
+  a.has-text-{$name}
     &:hover,
     &:focus
-      color darken(color, 10%)
+      color darken($color, 10%)
 
 // Visibility
+
+$displays ?= block flex inline inline-block inline-flex
+
+for $display in $displays
+  .is-{$display}
+    display $display
+  +mobile()
+    .is-{$display}-mobile
+      display $display !important
+  +tablet()
+    .is-{$display}-tablet
+      display $display !important
+  +tablet-only()
+    .is-{$display}-tablet-only
+      display $display !important
+  +touch()
+    .is-{$display}-touch
+      display $display !important
+  +desktop()
+    .is-{$display}-desktop
+      display $display !important
+  +desktop-only()
+    .is-{$display}-desktop-only
+      display $display !important
+  +widescreen()
+    .is-{$display}-widescreen
+      display $display !important
+  +widescreen-only()
+    .is-{$display}-widescreen-only
+      display $display !important
+  +fullhd()
+    .is-{$display}-fullhd
+      display $display !important
 
 .is-hidden
   display none !important
@@ -101,13 +105,43 @@ for name, pair in $colors
   .is-hidden-widescreen
     display none !important
 
++widescreen-only()
+  .is-hidden-widescreen-only
+    display none !important
+
++fullhd()
+  .is-hidden-fullhd
+    display none !important
+
 // Other
 
 .is-marginless
-  margin 0 !important
+  margin: 0 !important
+
+.is-vertically-marginless
+  margin-top 0 !important
+  margin-bottom 0 !important
+
+.is-horizontally-marginless
+  margin-left 0 !important
+  margin-right 0 !important
 
 .is-paddingless
   padding 0 !important
+
+.is-vertically-paddingless
+  padding-top 0 !important
+  padding-bottom 0 !important
+
+.is-horizontally-paddingless
+  padding-left 0 !important
+  padding-right 0 !important
+
+.is-radiusless
+  border-radius 0 !important
+
+.is-shadowless
+  box-shadow none !important
 
 .is-unselectable
   unselectable()

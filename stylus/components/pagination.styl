@@ -1,31 +1,32 @@
-$pagination ?= $grey-darker
+$pagination-color ?= $grey-darker
 $pagination-background ?= $white
-$pagination-border ?= $grey-lighter
+$pagination-border-color ?= $grey-lighter
+$pagination-margin ?= -0.25rem
 
-$pagination-hover ?= $link-hover
-$pagination-hover-border ?= $link-hover-border
+$pagination-hover-color ?= $link-hover
+$pagination-hover-border-color ?= $link-hover-border
 
-$pagination-focus ?= $link-focus
-$pagination-focus-border ?= $link-focus-border
+$pagination-focus-color ?= $link-focus
+$pagination-focus-border-color ?= $link-focus-border
 
-$pagination-active ?= $link-active
-$pagination-active-border ?= $link-active-border
+$pagination-active-color ?= $link-active
+$pagination-active-border-color ?= $link-active-border
 
-$pagination-disabled ?= $grey
-$pagination-disabled-background ?= $grey-lighter
-$pagination-disabled-border ?= $grey-lighter
+$pagination-disabled-color ?= $grey
+$pagination-disabled-background-color ?= $grey-lighter
+$pagination-disabled-border-color ?= $grey-lighter
 
-$pagination-current ?= $link-invert
-$pagination-current-background ?= $link
-$pagination-current-border ?= $link
+$pagination-current-color ?= $link-invert
+$pagination-current-background-color ?= $link
+$pagination-current-border-color ?= $link
 
-$pagination-ellipsis ?= $grey-light
+$pagination-ellipsis-color ?= $grey-light
 
 $pagination-shadow-inset ?= inset 0 1px 2px rgba(black, 0.2)
 
 .pagination
   font-size $size-normal
-  margin -0.25rem
+  margin $pagination-margin
   // Sizes
   &.is-small
     font-size $size-small
@@ -58,20 +59,20 @@ $pagination-shadow-inset ?= inset 0 1px 2px rgba(black, 0.2)
 .pagination-next,
 .pagination-link
   background $pagination-background
-  border-color $pagination-border
+  border-color $pagination-border-color
   min-width 2.25em
   &:hover
-    border-color $pagination-hover-border
-    color $pagination-hover
+    border-color $pagination-hover-border-color
+    color $pagination-hover-color
   &:focus
-    border-color $pagination-focus-border
+    border-color $pagination-focus-border-color
   &:active
     box-shadow $pagination-shadow-inset
   &[disabled]
-    background $pagination-disabled-background
-    border-color $pagination-border
+    background $pagination-disabled-background-color
+    border-color $pagination-border-color
     box-shadow none
-    color $pagination-disabled
+    color $pagination-disabled-color
     opacity 0.5
 
 .pagination-previous,
@@ -82,12 +83,12 @@ $pagination-shadow-inset ?= inset 0 1px 2px rgba(black, 0.2)
 
 .pagination-link
   &.is-current
-    background-color $pagination-current-background
-    border-color $pagination-current-border
-    color $pagination-current
+    background-color $pagination-current-background-color
+    border-color $pagination-current-border-color
+    color $pagination-current-color
 
 .pagination-ellipsis
-  color $pagination-ellipsis
+  color $pagination-ellipsis-color
   pointer-events none
 
 .pagination-list

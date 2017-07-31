@@ -1,12 +1,14 @@
-$title ?=             $grey-darker
-$title-size ?=        $size-3
-$title-weight ?=      $weight-light
-$title-weight-bold ?= $weight-semibold
+$title-color ?= $grey-darker
+$title-size ?= $size-3
+$title-weight ?= $weight-semibold
+$title-strong-color ?= inherit
+$title-strong-weight ?= inherit
 
-$subtitle ?=          $grey-dark
-$subtitle-size ?=     $size-5
-$subtitle-strong ?=   $grey-darker
-$subtitle-weight ?=   $weight-light
+$subtitle-color ?= $grey-dark
+$subtitle-size ?= $size-5
+$subtitle-weight ?= $weight-light
+$subtitle-strong-color ?= $grey-darker
+$subtitle-strong-weight ?= $weight-semibold
 
 .title,
 .subtitle
@@ -14,19 +16,18 @@ $subtitle-weight ?=   $weight-light
   word-break break-word
   em,
   span
-    font-weight $title-weight
-  strong
-    font-weight $title-weight-bold
+    font-weight inherit
   .tag
     vertical-align middle
 
 .title
-  color $title
+  color $title-color
   font-size $title-size
   font-weight $title-weight
   line-height 1.125
   strong
-    color inherit
+    color $title-strong-color
+    font-weight $title-strong-weight
   & + .highlight
     margin-top -0.75rem
   &:not(.is-spaced) + .subtitle
@@ -37,12 +38,13 @@ $subtitle-weight ?=   $weight-light
       font-size $size
 
 .subtitle
-  color $subtitle
+  color $subtitle-color
   font-size $subtitle-size
   font-weight $subtitle-weight
   line-height 1.25
   strong
-    color $subtitle-strong
+    color $subtitle-strong-color
+    font-weight $subtitle-strong-weight
   &:not(.is-spaced) + .title
     margin-top -1.5rem
   // Sizes

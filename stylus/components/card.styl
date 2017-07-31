@@ -1,17 +1,17 @@
-$card ?= $text
-$card-background ?= $white
+$card-color ?= $text
+$card-background-color ?= $white
 $card-shadow ?= 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)
 
-$card-header ?= $text-strong
+$card-header-color ?= $text-strong
 $card-header-shadow ?= 0 1px 2px rgba($black, 0.1)
 $card-header-weight ?= $weight-bold
 
-$card-footer-border ?= $border
+$card-footer-border-top ?= 1px solid $border
 
 .card
-  background-color $card-background
+  background-color $card-background-color
   box-shadow $card-shadow
-  color $card
+  color $card-color
   max-width 100%
   position relative
 
@@ -22,7 +22,7 @@ $card-footer-border ?= $border
 
 .card-header-title
   align-items center
-  color $card-header
+  color $card-header-color
   display flex
   flex-grow 1
   font-weight $card-header-weight
@@ -43,7 +43,7 @@ $card-footer-border ?= $border
   padding 1.5rem
 
 .card-footer
-  border-top 1px solid $card-footer-border
+  border-top $card-footer-border-top
   align-items stretch
   display flex
 
@@ -56,7 +56,7 @@ $card-footer-border ?= $border
   justify-content center
   padding 0.75rem
   &:not(:last-child)
-    border-right 1px solid $card-footer-border
+    border-right $card-footer-border-top
 
 .card
   .media:not(:last-child)

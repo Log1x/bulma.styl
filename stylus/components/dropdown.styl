@@ -1,15 +1,15 @@
-$dropdown-content-background ?= $white
+$dropdown-content-background-color ?= $white
 $dropdown-content-arrow ?= $link
 $dropdown-content-offset ?= 4px
 $dropdown-content-radius ?= $radius
 $dropdown-content-shadow ?= 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)
 $dropdown-content-z ?= 20
 
-$dropdown-item ?= $grey-dark
-$dropdown-item-hover ?= $black
-$dropdown-item-hover-background ?= $background
-$dropdown-item-active ?= $black
-$dropdown-item-active-background ?= transparent
+$dropdown-item-color ?= $grey-dark
+$dropdown-item-hover-color ?= $black
+$dropdown-item-hover-background-color ?= $background
+$dropdown-item-active-color ?= $black
+$dropdown-item-active-background-color ?= transparent
 
 $dropdown-divider-background ?= $border
 
@@ -28,23 +28,21 @@ $dropdown-divider-background ?= $border
 .dropdown-menu
   display none
   left 0
-  max-width 20rem
   min-width 12rem
   padding-top $dropdown-content-offset
   position absolute
   top 100%
-  width 100%
   z-index $dropdown-content-z
 
 .dropdown-content
-  background-color $dropdown-content-background
+  background-color $dropdown-content-background-color
   border-radius $dropdown-content-radius
   box-shadow $dropdown-content-shadow
   padding-bottom 0.5rem
   padding-top 0.5rem
 
 .dropdown-item
-  color $dropdown-item
+  color $dropdown-item-color
   display block
   font-size 0.875rem
   line-height 1.5
@@ -56,11 +54,11 @@ a.dropdown-item
   white-space nowrap
   &:hover,
   &.is-active
-    background-color $dropdown-item-hover-background
-    color $dropdown-item-hover
+    background-color $dropdown-item-hover-background-color
+    color $dropdown-item-hover-color
 
 .dropdown-divider
-  background-color $dropdown-divider-background
+  background-color $dropdown-divider-background-color
   border none
   display block
   height 1px

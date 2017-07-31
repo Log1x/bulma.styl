@@ -8,13 +8,13 @@ powerNumber(number, exp)
       value = value / number
   return value
 
-colorLuminance(color = #000)
+colorLuminance($color = #000)
   color-rgb = {
-    'red': red(color),
-    'green': green(color),
-    'blue': blue(color)
+    'red': red($color),
+    'green': green($color),
+    'blue': blue($color)
   }
-  
+
   for name, value in color-rgb
     adjusted = 0
     value = value / 255
@@ -24,11 +24,11 @@ colorLuminance(color = #000)
       value = (value + .055) / 1.055
       value = powerNumber(value, 2)
     color-rgb[name] = value
-    
+
   return (color-rgb.red * .2126) + (color-rgb.green * .7152) + (color-rgb.blue * .0722)
 
-findColorInvert(color)
-  if (colorLuminance(color) > 0.55)
+findColorInvert($color)
+  if (colorLuminance($color) > 0.55)
     return rgba(#000, 0.7)
   else
     return #fff

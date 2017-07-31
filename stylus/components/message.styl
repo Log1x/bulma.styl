@@ -1,34 +1,57 @@
+$message-background-color ?= $background
+$message-radius ?= $radius
+
+$message-header-background-color ?= $text
+$message-header-color ?= $text-invert
+$message-header-padding ?= 0.5em 0.75em
+$message-header-radius ?= $radius
+
+$message-body-border ?= 1px solid $border
+$message-body-color ?= $text
+$message-body-padding ?= 1em 1.25em
+$message-body-radius ?= $radius
+
+$message-body-pre-background-color ?= $white
+$message-body-pre-code-background-color ?= transparent
+
 .message
   block()
-  background-color $background
-  border-radius $radius
+  background-color $message-background-color
+  border-radius $message-radius
   font-size $size-normal
+  // Sizes
+  &.is-small
+    font-size: $size-small
+  &.is-medium
+    font-size: $size-medium
+  &.is-large
+    font-size: $size-large
   // Colors
-  for name, pair in $colors
-    color = pair['1']
-    color-invert = pair['2']
-    color-lightning = max((100% - lightness(color)) - 2%, 0%)
-    color-luminance = colorLuminance(color)
-    darken-percentage = color-luminance * 70%
-    desaturate-percentage = color-luminance * 30%
-    &.is-{name}
-      background-color lighten(color, color-lightning)
+  for $name, $pair in $colors
+    $color = $pair['1']
+    $color-invert = $pair['2']
+    $color-lightning = max((100% - lightness($color)) - 2%, 0%)
+    $color-luminance = colorLuminance($color)
+    $darken-percentage = $color-luminance * 70%
+    $desaturate-percentage = $color-luminance * 30%
+    &.is-{$name}
+      background-color lighten($color, $color-lightning)
       .message-header
         background-color color
-        color color-invert
+        color $color-invert
       .message-body
-        border-color color
-        color desaturate(darken(color, darken-percentage), desaturate-percentage)
+        border-color $color
+        color desaturate(darken($color, $darken-percentage), $desaturate-percentage)
 
 .message-header
   align-items center
-  background-color $text
-  border-radius $radius $radius 0 0
-  color $text-invert
+  background-color $message-header-background-color
+  border-radius $message-header-radius $message-header-radius 0 0
+  color $message-header-color
   display flex
   justify-content space-between
   line-height 1.25
-  padding 0.5em 0.75em
+  padding $message-header-padding
   position relative
   a,
   strong
@@ -45,10 +68,10 @@
     border-top none
 
 .message-body
-  border 1px solid $border
-  border-radius $radius
-  color $text
-  padding 1em 1.25em
+  border $message-body-border
+  border-radius $message-body-radius
+  color $message-body-color
+  padding $message-body-padding
   a,
   strong
     color currentColor
@@ -56,6 +79,6 @@
     text-decoration underline
   code,
   pre
-    background $white
+    background $message-body-pre-background-color
   pre code
-    background transparent
+    background $message-body-pre-code-background-color

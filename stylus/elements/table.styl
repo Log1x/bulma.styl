@@ -1,58 +1,65 @@
-$table                           ?= $grey-darker
-$table-background                ?= $white
-$table-border                    ?= $grey-lighter
+$table-color ?= $grey-darker
+$table-background-color ?= $white
 
-$table-head                      ?= $grey
+$table-cell-border ?= 1px solid $grey-lighter
+$table-cell-border-width ?= 0 0 1px
+$table-cell-padding ?= 0.5em 0.75em
+$table-cell-heading-color ?= $text-strong
 
-$table-row-hover-background      ?= $white-bis
+$table-head-color ?= $grey
+$table-head-cell-border-width ?= 0 0 2px
+$table-head-cell-color ?= $text-strong
+$table-foot-cell-border-width ?= 2px 0 0
+$table-foot-cell-color ?= $text-strong
 
-$table-row-active-background     ?= $primary
-$table-row-active                ?= $primary-invert
+$table-row-hover-background-color ?= $white-bis
 
-$table-row-even-background       ?= $white-bis
-$table-row-even-hover-background ?= $white-ter
+$table-row-active-background-color ?= $primary
+$table-row-active-color ?= $primary-invert
+
+$table-striped-row-even-background-color ?= $white-bis
+$table-striped-row-even-hover-background-color ?= $white-ter
 
 .table
-  background-color $table-background
-  color $table
+  background-color $table-background-color
+  color $table-color
   margin-bottom 1.5rem
-  width 100%
   td,
   th
-    border 1px solid $table-border
-    border-width 0 0 1px
-    padding 0.5em 0.75em
+    border 1px solid $table-cell-border
+    border-width $table-cell-border-width
+    padding $table-cell-padding
     vertical-align top
     // Modifiers
     &.is-narrow
       white-space nowrap
       width 1%
   th
-    color $text-strong
+    color $table-cell-heading-color
     text-align left
   tr
     &:hover
-      background-color $table-row-hover-background
+      background-color $table-row-hover-background-color
     &.is-selected
-      background-color $table-row-active-background
-      color $table-row-active
+      background-color $table-row-active-background-color
+      color $table-row-active-color
       a,
       strong
         color currentColor
       td,
       th
-        border-color $table-row-active
+        border-color $table-row-active-color
         color currentColor
   thead
     td,
     th
-      border-width 0 0 2px
-      color $table-head
+      border-width $table-head-cell-border-width
+      color $table-head-cell-color
   tfoot
     td,
     th
-      border-width 2px 0 0
-      color $table-head
+      border-width $table-foot-cell-border-width
+      color $table-foot-cell-color
   tbody
     tr
       &:last-child
@@ -69,6 +76,8 @@ $table-row-even-hover-background ?= $white-ter
         td,
         th
           border-bottom-width 1px
+  &.is-fullwidth
+    width 100%
   &.is-narrow
     td,
     th
@@ -77,6 +86,6 @@ $table-row-even-hover-background ?= $white-ter
     tbody
       tr:not(.is-selected)
         &:nth-child(even)
-          background-color $table-row-even-background
+          background-color $table-striped-row-even-background-color
           &:hover
-            background-color $table-row-even-hover-background
+            background-color $table-striped-row-even-hover-background-color
