@@ -34,7 +34,7 @@ $subtitle-strong-weight ?= $weight-semibold
     margin-top -1.5rem
   // Sizes
   for $size, $i in $sizes
-    &.is-{$i}
+    &.is-{$i+1}
       font-size $size
 
 .subtitle
@@ -49,5 +49,5 @@ $subtitle-strong-weight ?= $weight-semibold
     margin-top -1.5rem
   // Sizes
   for $size, $i in $sizes
-    &.is-{$i}
+    &.is-{$i+1}
       font-size $size

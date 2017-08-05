@@ -19,16 +19,82 @@
 .is-overlay
   overlay()
 
-// Text
+// Typography
 
-.has-text-centered
-  text-align center !important
+for $size in $sizes
+  $i = index($sizes, $size) + 1
+  .is-size-{$i}
+    font-size $size !important
+  +mobile()
+    .is-size-{$i}-mobile
+      font-size $size !important
+  +tablet()
+    .is-size-{$i}-tablet
+      font-size $size !important
+  +touch()
+    .is-size-{$i}-touch
+      font-size $size !important
+  +desktop()
+    .is-size-{$i}-desktop
+      font-size $size !important
+  +widescreen()
+    .is-size-{$i}-widescreen
+      font-size $size !important
+  +fullhd()
+    .is-size-{$i}-fullhd
+      font-size $size !important
+
+$alignments ?= {
+  'centered': 'center',
+  'left': 'left',
+  'right': 'right'
+}
+
+for $alignment, $text-align in $alignments
+  .has-text-{$alignment}
+    text-align $text-align !important
+  +mobile()
+    .has-text-{$alignment}-mobile
+      text-align $text-align !important
+  +tablet()
+    .has-text-{$alignment}-tablet
+      text-align $text-align !important
+  +tablet-only()
+    .has-text-{$alignment}-tablet-only
+      text-align $text-align !important
+  +touch()
+    .has-text-{$alignment}-touch
+      text-align $text-align !important
+  +desktop()
+    .has-text-{$alignment}-desktop
+      text-align $text-align !important
+  +desktop-only()
+    .has-text-{$alignment}-desktop-only
+      text-align $text-align !important
+  +widescreen()
+    .has-text-{$alignment}-widescreen
+      text-align $text-align !important
+  +widescreen-only()
+    .has-text-{$alignment}-widescreen-only
+      text-align $text-align !important
+  +fullhd()
+    .has-text-{$alignment}-fullhd
+      text-align $text-align !important
 
 .has-text-left
   text-align left !important
 
 .has-text-right
   text-align right !important
+
+.is-capitalized
+  text-transform capitalize !important
+
+.is-lowercase
+  text-transform lowercase !important
+
+.is-uppercase
+  text-transform uppercase !important
 
 for $name, $pair in $colors
   $color = $pair['1']

@@ -6,7 +6,6 @@ $table-cell-border-width ?= 0 0 1px
 $table-cell-padding ?= 0.5em 0.75em
 $table-cell-heading-color ?= $text-strong
 
-$table-head-color ?= $grey
 $table-head-cell-border-width ?= 0 0 2px
 $table-head-cell-color ?= $text-strong
 $table-foot-cell-border-width ?= 2px 0 0
@@ -30,6 +29,14 @@ $table-striped-row-even-hover-background-color ?= $white-ter
     border-width $table-cell-border-width
     padding $table-cell-padding
     vertical-align top
+    // Colors
+    for $name, $pair in $colors
+      $color = $pair['1']
+      $color-invert = $pair['2']
+      &.is-{$name}
+        background-color $color
+        border-color $color
+        color $color-invert
     // Modifiers
     &.is-narrow
       white-space nowrap
