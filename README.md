@@ -31,6 +31,17 @@ Since Bulma.styl is functionally identical to the original Bulma, you can refer 
 
 All variable and mixin names are the same.
 
+## Extensions 
+
+1:1 Stylus translations of the available Bulma [extensions](http://bulma.io/extensions/) are also available:
+
+- [bulma.styl-pageloader](https://github.com/log1x/bulma.styl-pageloader)
+- [bulma.styl-ribbon](https://github.com/log1x/bulma.styl-ribbon)
+- [bulma.styl-badge](https://github.com/log1x/bulma.styl-badge)
+- [bulma.styl-steps](https://github.com/log1x/bulma.styl-steps)
+- [bulma.styl-tooltip](https://github.com/log1x/bulma.styl-tooltip)
+- [bulma.styl-timeline](https://github.com/log1x/bulma.styl-timeline)
+
 ## Bugs & support
 
 Any bugs or support requests can be posted into [the GitHub issue tracker](https://github.com/Log1x/bulma.styl/issues).
