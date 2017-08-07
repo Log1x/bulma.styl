@@ -103,7 +103,7 @@ for $name, $pair in $colors
   a.has-text-{$name}
     &:hover,
     &:focus
-      color darken($color, 10%)
+      color darken($color, 10%) !important
 
 // Visibility
 
@@ -111,7 +111,7 @@ $displays ?= block flex inline inline-block inline-flex
 
 for $display in $displays
   .is-{$display}
-    display $display
+    display $display !important
   +mobile()
     .is-{$display}-mobile
       display $display !important

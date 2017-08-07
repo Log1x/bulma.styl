@@ -20,7 +20,7 @@ $input-icon-active-color ?= $grey
 
 $input-radius ?= $radius
 
-$file-border-color ?= transparent
+$file-border-color ?= $border
 $file-radius ?= $radius
 
 $file-cta-background-color ?= $white-ter
@@ -28,7 +28,7 @@ $file-cta-color ?= $grey-dark
 $file-cta-hover-color ?= $grey-darker
 $file-cta-active-color ?= $grey-darker
 
-$file-name-border-color ?= $file-cta-background-color
+$file-name-border-color ?= $border
 $file-name-border-style ?= solid
 $file-name-border-width ?= 1px 1px 1px 0
 $file-name-max-width ?= 16em
@@ -209,6 +209,9 @@ input()
       border-top-left-radius 0
   &.is-centered
     justify-content center
+  &.is-right
+    justify-content flex-end
+  &.is-boxed
     .file-label
       flex-direction column
     .file-cta
