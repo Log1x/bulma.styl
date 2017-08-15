@@ -44,7 +44,7 @@ $tabs-toggle-link-active-color ?= $primary-invert
     color $tabs-link-color
     display flex
     justify-content center
-    margin-bottom -$tabs-border-bottom-width
+    margin-bottom (- $tabs-border-bottom-width)
     padding $tabs-link-padding
     vertical-align top
     &:hover
@@ -118,7 +118,7 @@ $tabs-toggle-link-active-color ?= $primary-invert
         z-index 2
     li
       & + li
-        margin-left -$tabs-toggle-link-border-width
+        margin-left (- $tabs-toggle-link-border-width)
       &:first-child a
         border-radius $tabs-toggle-link-radius 0 0 $tabs-toggle-link-radius
       &:last-child a
