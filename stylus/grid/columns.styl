@@ -1,12 +1,9 @@
-$column-gap ?= 0.75rem
-
 .column
   display block
   flex-basis 0
   flex-grow 1
   flex-shrink 1
-  padding-left $column-gap
-  padding-right $column-gap
+  padding 0.75rem
   .columns.is-mobile > &.is-narrow
     flex none
   .columns.is-mobile > &.is-full
@@ -281,13 +278,13 @@ $column-gap ?= 0.75rem
         margin-left (i / 12) * 100%
 
 .columns
-  margin-left (- $column-gap)
-  margin-right (- $column-gap)
-  margin-top (- $column-gap)
+  margin-left -0.75rem
+  margin-right -0.75rem
+  margin-top -0.75rem
   &:last-child
-    margin-bottom (- $column-gap)
+    margin-bottom -0.75rem
   &:not(:last-child)
-    margin-bottom "calc(1.5rem - %s)" % $column-gap
+    margin-bottom 0.75rem
   // Modifiers
   &.is-centered
     justify-content center
@@ -295,13 +292,23 @@ $column-gap ?= 0.75rem
     margin-left 0
     margin-right 0
     margin-top 0
-    & > .column
-      margin 0
-      padding 0 !important
-    &:not(:last-child)
-      margin-bottom 1.5rem
     &:last-child
       margin-bottom 0
+    &:not(:last-child)
+      margin-bottom 1.5rem
+    & > .column
+      margin 0
+      padding 0
+  &.is-grid
+    // Responsiveness
+    +tablet()
+      flex-wrap wrap
+      & > .column
+        max-width 33.3333%
+        padding 0.75rem
+        width 33.3333%
+        & + .column
+          margin-left 0
   &.is-mobile
     display flex
   &.is-multiline
@@ -316,14 +323,3 @@ $column-gap ?= 0.75rem
     // Modifiers
     &.is-desktop
       display flex
-
-.columns.is-variable
-  --columnGap 0.75rem
-  margin-left calc(-1 * var(--columnGap))
-  margin-right calc(-1 * var(--columnGap))
-  .column
-    padding-left var(--columnGap)
-    padding-right var(--columnGap)
-  for i in (0..8)
-    &.is-{i}
-      --columnGap i * 0.25rem
