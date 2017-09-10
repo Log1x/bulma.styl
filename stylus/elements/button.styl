@@ -13,6 +13,15 @@ $button-focus-box-shadow-color ?= rgba($link, 0.25)
 $button-active ?= $link-active
 $button-active-border ?= $link-active-border
 
+$button-link-color ?= $text
+$button-link-hover-background-color ?= $background
+$button-link-hover-color ?= $text-strong
+
+$button-disabled-background-color ?= $white
+$button-disabled-border-color ?= $grey-lighter
+$button-disabled-shadow ?= none
+$button-disabled-opacity ?= 0.5
+
 $button-static ?= $grey
 $button-static-background ?= $white-ter
 $button-static-border ?= $grey-lighter
@@ -165,10 +174,10 @@ button-large()
     button-large()
   // Modifiers
   &[disabled]
-    background-color $button-background
-    border-color $button-border
-    box-shadow none
-    opacity 0.5
+    background-color $button-disabled-background-color
+    border-color $button-disabled-border-color
+    box-shadow $button-disabled-shadow
+    opacity $button-disabled-opacity
   &.is-fullwidth
     display flex
     width 100%
