@@ -21,28 +21,32 @@
 
 // Typography
 
-for $size in $sizes
-  $i = index($sizes, $size) + 1
-  .is-size-{$i}
-    font-size $size !important
-  +mobile()
-    .is-size-{$i}-mobile
-      font-size $size !important
-  +tablet()
-    .is-size-{$i}-tablet
-      font-size $size !important
-  +touch()
-    .is-size-{$i}-touch
-      font-size $size !important
-  +desktop()
-    .is-size-{$i}-desktop
-      font-size $size !important
-  +widescreen()
-    .is-size-{$i}-widescreen
-      font-size $size !important
-  +fullhd()
-    .is-size-{$i}-fullhd
-      font-size $size !important
+typography-size($target = '')
+  for $size in $sizes
+    $i = index($sizes, $size) + 1
+    if $target == ''
+      .is-size{$i}
+        font-size $size !important
+    else
+      .is-size{$i}-{$target}
+        font-size $size !important
+
+typography-size()
+
++mobile()
+  typography-size('mobile')
+
++tablet()
+  typography-size('tablet')
+
++desktop()
+  typography-size('desktop')
+
++widescreen()
+  typography-size('widescreen')
+
++fullhd()
+  typography-size('fullhd')
 
 $alignments ?= {
   'centered': 'center',
