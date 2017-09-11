@@ -202,12 +202,12 @@ input()
   &.is-medium
     font-size $size-medium
     .file-icon
-      .fa
+      .{$icon-selector}
         font-size 21px
   &.is-large
     font-size $size-large
     .file-icon
-      .fa
+      .{$icon-selector}
         font-size 28px
   &.has-name
     .file-cta
@@ -232,16 +232,16 @@ input()
     .file-icon
       height 1.5em
       width 1.5em
-      .fa
+      .{$icon-selector}
         font-size 21px
     &.is-small
-      .file-icon .fa
+      .file-icon .{$icon-selector}
         font-size 14px
     &.is-medium
-      .file-icon .fa
+      .file-icon .{$icon-selector}
         font-size 28px
     &.is-large
-      .file-icon .fa
+      .file-icon .{$icon-selector}
         font-size 35px
     &.has-path
       .file-cta
@@ -322,7 +322,7 @@ input()
   justify-content center
   margin-right 0.5em
   width 1em
-  .fa
+  .{$icon-selector}
     font-size 14px
 
 .label
