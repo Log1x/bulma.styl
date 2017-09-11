@@ -1,11 +1,10 @@
 {
   "name": "bulma.styl",
-  "version": "0.5.1-dev3",
+  "version": "0.5.2",
   "homepage": "http://github.com/Log1x/bulma.styl",
   "author": "Brandon Nifong <brandon@tendency.me> (https://log1x.com)",
   "contributors": [
-    "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)",
-    "Oskari Groenroos <oskari@groenroos.fi> (http://groenroos.fi)"
+    "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)"
   ],
   "description": "Modern CSS framework based on Flexbox",
   "main": "bulma.styl",
@@ -38,8 +37,8 @@
   },
   "files": [
     "css",
-    "stylus",
-    "bulma.stylus",
+    "styl",
+    "bulma.styl",
     "LICENSE",
     "README.md"
   ]

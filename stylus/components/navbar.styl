@@ -23,6 +23,9 @@ $navbar-dropdown-arrow ?= $link
 $navbar-dropdown-radius ?= $radius-large
 $navbar-dropdown-z ?= 20
 
+$navbar-dropdown-boxed-radius ?= $radius-large
+$navbar-dropdown-boxed-shadow ?= 0 8px 8px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)
+
 $navbar-dropdown-item-hover-color ?= $black
 $navbar-dropdown-item-hover-background-color ?= $background
 $navbar-dropdown-item-active-color ?= $primary
@@ -40,26 +43,30 @@ $navbar-divider-background-color ?= $border
     &.is-{$name}
       background-color $color
       color $color-invert
-      .navbar-item,
-      .navbar-link
-        color $color-invert
-      a.navbar-item,
-      .navbar-link
-        &:hover,
-        &.is-active
-          background-color darken($color, 2.5%)
-          color $color-invert
       +desktop()
-        .navbar-link
-          &::after
-            border-color $color-invert
-        .navbar-dropdown a.navbar-item:not(.is-active):not(:hover),
-        .navbar-dropdown .navbar-item:not(a)
-          color $navbar-item
+        .navbar-brand,
+        .navbar-start
+        .navbar-end
+          & > .navbar-item,
+          .navbar-link
+            color $color-invert
+          & > a.navbar-item,
+          .navbar-link
+            &:hover,
+            &.is-active
+              background-color darken($color, 5%)
+              color $color-invert
+          .navbar-link
+            &::after
+              border-color $color-invert
         .navbar-item.has-dropdown:hover .navbar-link,
         .navbar-item.has-dropdown.is-active .navbar-link
-          background-color darken($color, 2.5%)
+          background-color darken($color, 5%)
           color $color-invert
+        .navbar-dropdown
+          a.navbar-item
+            &.is-active
+              color $color
   & > .container
     align-items stretch
     display flex
@@ -73,7 +80,6 @@ $navbar-divider-background-color ?= $border
   align-items stretch
   display flex
   flex-shrink 0
-  max-width 100vw
   min-height $navbar-height
 
 .navbar-tabs
