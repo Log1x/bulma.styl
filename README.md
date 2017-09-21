@@ -35,12 +35,16 @@ All variable and mixin names are the same.
 
 1:1 Stylus translations of the available Bulma [extensions](http://bulma.io/extensions/) are also available:
 
-- [bulma.styl-pageloader](https://github.com/log1x/bulma.styl-pageloader)
-- [bulma.styl-ribbon](https://github.com/log1x/bulma.styl-ribbon)
 - [bulma.styl-badge](https://github.com/log1x/bulma.styl-badge)
+- [bulma.styl-divider](https://github.com/log1x/bulma.styl-divider)
+- [bulma.styl-pageloader](https://github.com/log1x/bulma.styl-pageloader)
+- [bulma.styl-pricing-table](https://github.com/log1x/bulma.styl-pricing-table)
+- [bulma.styl-ribbon](https://github.com/log1x/bulma.styl-ribbon)
+- [bulma.styl-steps-alt](https://github.com/log1x/bulma.styl-steps-alt)
 - [bulma.styl-steps](https://github.com/log1x/bulma.styl-steps)
-- [bulma.styl-tooltip](https://github.com/log1x/bulma.styl-tooltip)
+- [bulma.styl-switch](https://github.com/log1x/bulma.styl-switch)
 - [bulma.styl-timeline](https://github.com/log1x/bulma.styl-timeline)
+- [bulma.styl-tooltip](https://github.com/log1x/bulma.styl-tooltip)
 
 ## Bugs & support
 
