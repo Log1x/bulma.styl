@@ -85,6 +85,16 @@ $table-striped-row-even-hover-background-color ?= $white-ter
           border-bottom-width 1px
   &.is-fullwidth
     width 100%
+  &.is-hoverable
+    tbody
+      tr
+        &:hover
+          background-color $table-row-hover-background-color
+    &.is-striped
+      tbody
+        tr:not(.is-selected)
+          &:hover
+            background-color $table-striped-row-even-hover-background-color
   &.is-narrow
     td,
     th
@@ -94,5 +104,3 @@ $table-striped-row-even-hover-background-color ?= $white-ter
       tr:not(.is-selected)
         &:nth-child(even)
           background-color $table-striped-row-even-background-color
-          &:hover
-            background-color $table-striped-row-even-hover-background-color

@@ -36,8 +36,7 @@
     "start": "stylus -w bulma.styl --out css"
   },
   "files": [
-    "css",
-    "styl",
+    "stylus",
     "bulma.styl",
     "LICENSE",
     "README.md"
