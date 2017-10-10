@@ -1,6 +1,6 @@
 $primary ?= $turquoise
 
-$info ?= $blue
+$info ?= $cyan
 $success ?= $green
 $warning ?= $yellow
 $danger ?= $red
@@ -14,12 +14,13 @@ $orange-invert ?= findColorInvert($orange)
 $yellow-invert ?= findColorInvert($yellow)
 $green-invert ?= findColorInvert($green)
 $turquoise-invert ?= findColorInvert($turquoise)
+$cyan-invert ?= findColorInvert($cyan)
 $blue-invert ?= findColorInvert($blue)
 $purple-invert ?= findColorInvert($purple)
 $red-invert ?= findColorInvert($red)
 
 $primary-invert ?= $turquoise-invert
-$info-invert ?= $blue-invert
+$info-invert ?= $cyan-invert
 $success-invert ?= $green-invert
 $warning-invert ?= $yellow-invert
 $danger-invert ?= $red-invert
@@ -50,15 +51,15 @@ $pre-background ?= $background
 
 // Link colors
 
-$link ?= $primary
-$link-invert ?= $primary-invert
+$link ?= $blue
+$link-invert ?= $blue-invert
 $link-visited ?= $purple
 
 $link-hover ?= $grey-darker
 $link-hover-border ?= $grey-light
 
 $link-focus ?= $grey-darker
-$link-focus-border ?= $primary
+$link-focus-border ?= $blue
 
 $link-active ?= $grey-darker
 $link-active-border ?= $grey-dark
@@ -95,6 +96,10 @@ $colors ?= {
   'primary': {
   	'1': $primary,
   	'2': $primary-invert
+  },
+  'link': {
+    '1': $link,
+    '2': $link-invert
   },
   'info': {
   	'1': $info,

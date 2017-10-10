@@ -13,9 +13,9 @@ $button-focus-box-shadow-color ?= rgba($link, 0.25)
 $button-active ?= $link-active
 $button-active-border ?= $link-active-border
 
-$button-link-color ?= $text
-$button-link-hover-background-color ?= $background
-$button-link-hover-color ?= $text-strong
+$button-text-color ?= $text
+$button-text-hover-background-color ?= $background
+$button-text-hover-color ?= $text-strong
 
 $button-disabled-background-color ?= $white
 $button-disabled-border-color ?= $grey-lighter
@@ -81,7 +81,7 @@ button-large()
     border-color $button-active-border
     color $button-active
   // Colors
-  &.is-link
+  &.is-text
     background-color transparent
     border-color transparent
     color $text
@@ -90,12 +90,12 @@ button-large()
     &.is-hovered,
     &:focus,
     &.is-focused,
-      background-color $button-link-hover-background-color
-      color $button-link-hover-color
+      background-color $button-text-hover-background-color
+      color $button-text-hover-color
     &:active,
     &.is-active
-      background-color darken($button-link-hover-color, 5%)
-      color $button-link-hover-color
+      background-color darken($button-text-hover-color, 5%)
+      color $button-text-hover-color
     &[disabled]
       background-color transparent
       border-color transparent
