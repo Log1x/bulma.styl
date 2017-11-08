@@ -3,6 +3,8 @@ $title-size ?= $size-3
 $title-weight ?= $weight-semibold
 $title-strong-color ?= inherit
 $title-strong-weight ?= inherit
+$title-sub-size ?= 75%
+$title-sup-size ?= 75%
 
 $subtitle-color ?= $grey-dark
 $subtitle-size ?= $size-5
@@ -17,6 +19,10 @@ $subtitle-strong-weight ?= $weight-semibold
   em,
   span
     font-weight inherit
+  sub
+    font-size $title-sub-size
+  sup
+    font-size $title-sup-size
   .tag
     vertical-align middle
 
